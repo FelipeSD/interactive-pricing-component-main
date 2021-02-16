@@ -35,6 +35,23 @@ body {
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
   color: var(--grayishBlue);
+  box-sizing: border-box;
+
+  background-color: var(--veryPaleBlue);
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+/* SPACE */
+.px-2{
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.px-3{
+  padding-right: 3rem!important;
+  padding-left: 3rem!important;
 }
 
 /* TEXTS */
@@ -52,6 +69,7 @@ body {
 	background-color: var(--white);
 	border-radius: 10px;
 	box-shadow: 0 5px .875rem 2px rgba(41,48,66,.05);
+  word-wrap: break-word;
 }
 
 .card .card-body{
@@ -67,6 +85,12 @@ body {
 /* FLEXBOX */
 .d-flex{
   display: flex;
+}
+.justify-content-end{
+  justify-content: flex-end;
+}
+.align-items-center{
+  align-items: center;
 }
 
 .row {

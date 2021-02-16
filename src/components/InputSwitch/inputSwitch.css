@@ -1,0 +1,60 @@
+.custom-switch {
+    position: relative;
+    padding-left: .8rem;
+    display: block;
+}
+
+.custom-switch .custom-control-input {
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+
+/* SWITCH STYLING */
+.custom-switch .custom-control-label::after, 
+.custom-switch .custom-control-label::before {
+	position: absolute;
+	content: "";
+    pointer-events: all;
+}
+
+/* track */
+.custom-switch .custom-control-label::before {
+	left: -1rem;
+	width: 2.5rem;
+    height: 1.2rem;
+	pointer-events: all;
+	border-radius: 1rem;
+    background-color: var(--lightGrayishBlue);
+    border: none;
+
+    transition: background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+}
+
+/* button */
+.custom-switch .custom-control-label::after {
+    left: -0.8rem;
+    top: .2rem;
+    height: .8rem;
+    width: .8rem;
+
+	background-color: var(--white);
+	border-radius: .5rem;
+	transition: transform .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+}
+
+/* on checked */
+.custom-control-input:checked ~ .custom-control-label::after {
+	transform: translateX(1.2rem);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:active ~ .custom-control-label::before
+ {
+	background-color: var(--softCyan);
+}

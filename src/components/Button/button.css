@@ -1,0 +1,24 @@
+.btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    
+    outline: none;
+}
+
+.btn-large{
+    padding: 10px 40px;
+}
+
+.btn-round{
+    border-radius: 25px;
+}
+
+.btn-primary{
+    background-color: var(--darkDesaturatedBlue);
+    color: var(--paleBlue);
+}
+
+.btn-primary:active{
+    color: var(--white);
+}
