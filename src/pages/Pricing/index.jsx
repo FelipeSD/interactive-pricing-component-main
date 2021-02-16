@@ -36,7 +36,7 @@ const Pricing = () => {
             <div className="card">
                 <div className="card-body px-3">
                     <div className="row">
-                        <div className="col-sm-auto page-views">
+                        <div className="col-12 col-sm-auto page-views">
                             100k Pageviews
                         </div>
                         
@@ -44,7 +44,7 @@ const Pricing = () => {
                             <InputRange min="0" max="6" />
                         </div>
 
-                        <div className="col-sm cost">
+                        <div className="col-12 col-sm cost">
                             <span className="price">$ 16.00</span>
                             <span> / month</span>
                         </div>
@@ -55,7 +55,7 @@ const Pricing = () => {
                             Monthly Billing
                         </label>
                         
-                        <div className="px-2">
+                        <div className="px-sm-1 px-2">
                             <InputSwitch id="switch" />
                         </div>
 
@@ -64,21 +64,21 @@ const Pricing = () => {
                         </label>
                         <div className="badge badge-sm badge-red">
                             -25% {' '}
-                            <span className="ml-1">discount</span>
+                            <span className="discount-message ml-1">discount</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="card-footer px-3">
                     <div className="row">
-                        <div className="col-sm-auto">
+                        <div className="col-12 col-sm-auto">
                             <div className="benefits">
                                 <BenefitItem name="Unlimited websites" />
                                 <BenefitItem name="100% data ownership" />
                                 <BenefitItem name="Email reports" />                    
                             </div>
                         </div>
-                        <div className="col-sm d-flex justify-content-end align-items-center">
+                        <div className="col-12 col-sm d-flex justify-content-end align-items-center">
                             <LargeButton text="Start my trial" />
                         </div>
                     </div>

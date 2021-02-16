@@ -8,7 +8,7 @@ const InputSwitch = (props) => {
         <div className="custom-switch">
             <input
                 type="checkbox"
-                class="custom-control-input checked"
+                className="custom-control-input checked"
                 id={props.id}
                 value={check}
                 defaultChecked={check}

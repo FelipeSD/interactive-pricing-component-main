@@ -64,8 +64,8 @@
 }
 .switch-container .badge {
     position: absolute;
-    right: 1.5rem;
-    margin-left: 1rem;
+    right: 2%;
+    margin-left: 10px;
     border-radius: 1rem;
     padding: 2px 5px;
 
@@ -96,4 +96,48 @@
 }
 .benefit-item > img{
     margin-right: 1rem;
+}
+
+@media (max-width:575px) {
+    #pricing-container {
+        text-align: center;
+    }
+
+    .range-container{
+        order: 0;
+    }
+
+    .row > div {
+        justify-content: center;
+    }
+
+    .benefits {
+        margin-bottom: 2rem;
+    }
+
+    .discount-message{
+        display: none;
+    }
+
+    .switch-container .badge {
+        right: -17px;
+    }
+
+    .px-sm-1{
+        padding-left: 1.5rem!important;
+        padding-right: 1.2rem;
+    }
+
+    #pricing-container .card{
+        margin: 20px;
+    }
+
+    #pricing-container .card-body.px-3 {
+        padding-right: 1.5rem!important;
+        padding-left: 1.5rem!important;
+    }
+
+    #pricing-container .bg-pattern{
+        width: auto;
+    }
 }

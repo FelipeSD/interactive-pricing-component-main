@@ -55,6 +55,6 @@
 
 .custom-control-input:checked ~ .custom-control-label::before,
 .custom-control-input:active ~ .custom-control-label::before
- {
+{
 	background-color: var(--softCyan);
 }
