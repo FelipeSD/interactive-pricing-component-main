@@ -15,13 +15,13 @@
 
   /* NEUTRAL */
   /* (Pricing Component Background) */
-  --white:  hsl (0, 0%, 100%); 
+  --white:  hsl(0, 0%, 100%); 
   /* (Main Background) */
   --veryPaleBlue: hsl(230, 100%, 99%);
   /* (Empty Slider Bar) */
   --lightGrayishBlue: hsl(224, 65%, 95%);
   /* (Toggle Background) */
-  --lightGrayishBlue: hsl(223, 50%, 87%);
+  --lightGrayishBlue2: hsl(223, 50%, 87%);
   /* (Text) */
   --grayishBlue: hsl(225, 20%, 60%);
   /* (Text & CTA Background) */

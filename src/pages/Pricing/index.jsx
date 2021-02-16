@@ -1,4 +1,6 @@
 import React from 'react';
+import InputRange from "../../components/InputRange";
+
 import iCheck from '../../assets/images/icon-check.svg';
 import './pricing.css';
 
@@ -30,7 +32,7 @@ const Pricing = () => {
                         </div>
                         
                         <div className="col-12 range-container">
-                            inputRange
+                            <InputRange />
                         </div>
 
                         <div className="col-sm cost">
