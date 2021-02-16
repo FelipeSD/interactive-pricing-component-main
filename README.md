@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive pricing component
 
-![Design preview for the Interactive pricing component coding challenge](../interactive-pricing-component-main/public/design/desktop-preview.jpg)
+![Design preview for the Interactive pricing component coding challenge](./public/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
