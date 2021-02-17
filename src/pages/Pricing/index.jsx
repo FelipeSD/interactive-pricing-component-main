@@ -3,9 +3,9 @@ import InputRange from "../../components/InputRange";
 import InputSwitch from '../../components/InputSwitch';
 import {LargeButton} from '../../components/Button';
 
-import iCheck from '../../assets/images/icon-check.svg';
 import circles from '../../assets/images/pattern-circles.svg';
 import bgPattern from '../../assets/images/bg-pattern.svg';
+import iCheck from '../../assets/images/icon-check.svg';
 
 import './pricing.css';
 
