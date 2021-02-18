@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import InputRange from "../../components/InputRange";
 import InputSwitch from '../../components/InputSwitch';
 import {LargeButton} from '../../components/Button';
@@ -19,16 +19,34 @@ const BenefitItem = (props) => {
 }
 
 const Pricing = () => {
+    const [billingType, setBillingType] = useState(false);
+    const [range, setRange] = useState("4");
+    
+    const changeRange = useCallback((e)=> {
+        let rangeList = {
+            
+        }
+        setRange(e.target.value);
+    }, [range]);
+
+    const changeBilling = useCallback((e)=> {
+        setBillingType(!billingType);
+    }, [billingType]);
+
     return (
         <div id="pricing-container">
             <img className="bg-pattern" src={bgPattern} alt="pattern background"/>
 
             <div className="title-container">
                 <h3 className="page-title">Simple, traffic-based pricing</h3>
-                <p>
-                    Sign-up for our 30-day trial.
-                    No credit card required.
-                </p>
+                <div className="subtitle">
+                    <p>
+                        Sign-up for our 30-day trial.
+                    </p>
+                    <p>
+                        No credit card required.
+                    </p>
+                </div>
 
                 <img className="pattern-circles" src={circles} alt="circles background"/>
             </div>
@@ -41,7 +59,7 @@ const Pricing = () => {
                         </div>
                         
                         <div className="col-12 range-container">
-                            <InputRange min="0" max="6" />
+                            <InputRange min="0" max="6" value={range} onChange={changeRange} />
                         </div>
 
                         <div className="col-12 col-sm cost">
@@ -56,7 +74,7 @@ const Pricing = () => {
                         </label>
                         
                         <div className="px-sm-1 px-2">
-                            <InputSwitch id="switch" />
+                            <InputSwitch id="switch" value={billingType} onChange={changeBilling} />
                         </div>
 
                         <label htmlFor="switch">

@@ -20,8 +20,18 @@
 .title-container {
     position: relative;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
+.title-container .subtitle{
+    display: flex;
+    flex-direction: row;
+}
+.title-container .subtitle p{
+    margin-bottom: 0;
+    padding: .2rem;
+}
+
 .page-title{
     color: var(--darkDesaturatedBlue);
     margin-bottom: 0;
@@ -103,6 +113,10 @@
         text-align: center;
     }
 
+    .title-container .subtitle{
+        flex-direction: column;
+    }
+
     .range-container{
         order: 0;
     }
@@ -139,5 +153,11 @@
 
     #pricing-container .bg-pattern{
         width: auto;
+    }
+}
+
+@media (max-width:340px) {
+    .switch-container .badge {
+        right: -30px;
     }
 }
