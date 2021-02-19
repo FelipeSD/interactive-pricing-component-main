@@ -1,3 +1,31 @@
+#My impressions about this project
+Hi, thanks for taking a look at this project. 
+I'd like to share some thoughts, difficulties that I've found when building 
+this webpage, and why did I choose React library to use in this project.
+
+###Why React lib?
+React is a good library to build web applications. It allows you to divide the structure
+of your page into small generic components, so you can use them accordingly and maybe repeat them
+as it need with no repeated code. When you make components you can separate the styling files too, and
+this is awesome to organize the frontend code.
+
+###Difficulties I've found
+The project requires to have:
+- A large gray svg pattern on background, which it needed to positioned like in the proposed design to fit well in mobile and desktop.
+- 1 custom styled input type range, that I wasn't able to set the progress bar to be green in all web browsers.
+In this case, Chrome doesn't have this progress bar, only Firefox does.
+- 1 checkbox as a switch style. To separate this component to be generic, I couldn't get the right paddings
+to adequate to checkbox with no labels, with 1 label and with 2 labels as it is.
+- I have some trouble to find the correct font sizes, and the main card width and height. 
+  
+###Improvements
+This project helped me to identify when a CSS pre-processor can help to build web pages with easy, like Sass, for example.
+It is possible to use css variables where you can define the colors that are constantly used in the project ensuring
+web browsers compatibility.
+
+
+
+
 # Frontend Mentor - Interactive pricing component
 
 ![Design preview for the Interactive pricing component coding challenge](./public/design/desktop-preview.jpg)
@@ -122,9 +150,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project, so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 

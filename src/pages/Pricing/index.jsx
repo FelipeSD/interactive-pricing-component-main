@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import InputRange from "../../components/InputRange";
 import InputSwitch from '../../components/InputSwitch';
 import {LargeButton} from '../../components/Button';
@@ -18,18 +18,52 @@ const BenefitItem = (props) => {
     )
 }
 
-const Pricing = () => {
-    const [billingType, setBillingType] = useState(false);
-    const [range, setRange] = useState("4");
-    
-    const changeRange = useCallback((e)=> {
-        let rangeList = {
-            
-        }
-        setRange(e.target.value);
-    }, [range]);
+const inputRangeView = { // value: views (in thousands)
+    0: '10k',
+    1: '50k',
+    2: '100k',
+    3: '500k',
+    4: '1M'
+}
 
-    const changeBilling = useCallback((e)=> {
+const pricePerView = { // views: dollars
+    '10k': 8.00,
+    '50k': 12.00,
+    '100k': 16.00,
+    '500k': 24.00,
+    '1M': 36.00
+}
+
+const Pricing = () => {
+    const [price, setPrice] = useState(16.00);
+    const [views, setViews] = useState('100k');
+
+    const [billingType, setBillingType] = useState(false);
+    const [range, setRange] = useState(2);
+
+    const applyDiscount = (price) => {
+        return price - price*25/100;
+    }
+
+    useEffect(()=>{
+        let view = inputRangeView[range],
+            cost = pricePerView[view];
+
+        if(view) {
+            setViews(view);
+        }
+        if(cost){
+            cost = billingType ? applyDiscount(cost) : cost;
+            setPrice(cost);
+        }
+    }, [range, billingType]);
+
+    const changeRange = useCallback((e)=> {
+        let value = e.target.value;
+        setRange(value);
+    }, []);
+
+    const changeBilling = useCallback(()=> {
         setBillingType(!billingType);
     }, [billingType]);
 
@@ -55,15 +89,15 @@ const Pricing = () => {
                 <div className="card-body px-3">
                     <div className="row">
                         <div className="col-12 col-sm-auto page-views">
-                            100k Pageviews
+                            {views} Pageviews
                         </div>
-                        
+
                         <div className="col-12 range-container">
-                            <InputRange min="0" max="6" value={range} onChange={changeRange} />
+                            <InputRange min="0" max="4" value={range} onChange={changeRange} />
                         </div>
 
                         <div className="col-12 col-sm cost">
-                            <span className="price">$ 16.00</span>
+                            <span className="price">$ {price.toFixed(2)}</span>
                             <span> / month</span>
                         </div>
                     </div>
@@ -72,7 +106,7 @@ const Pricing = () => {
                         <label htmlFor="switch">
                             Monthly Billing
                         </label>
-                        
+
                         <div className="px-sm-1 px-2">
                             <InputSwitch id="switch" value={billingType} onChange={changeBilling} />
                         </div>
@@ -93,7 +127,7 @@ const Pricing = () => {
                             <div className="benefits">
                                 <BenefitItem name="Unlimited websites" />
                                 <BenefitItem name="100% data ownership" />
-                                <BenefitItem name="Email reports" />                    
+                                <BenefitItem name="Email reports" />
                             </div>
                         </div>
                         <div className="col-12 col-sm d-flex justify-content-end align-items-center">
