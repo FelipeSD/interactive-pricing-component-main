@@ -32,6 +32,10 @@
     padding: .2rem;
 }
 
+.min-width {
+    min-width: 550px;
+}
+
 .page-title{
     color: var(--darkDesaturatedBlue);
     margin-bottom: 0;
@@ -123,6 +127,10 @@
 
     .row > div {
         justify-content: center;
+    }
+
+    .min-width {
+        min-width: unset;
     }
 
     .benefits {

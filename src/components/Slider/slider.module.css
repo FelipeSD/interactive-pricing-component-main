@@ -1,0 +1,44 @@
+.root {
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    touch-action: none;
+    width: 100%;
+    height: 20px;
+}
+
+.track {
+    background-color: var(--lightGrayishBlue);
+    position: relative;
+    flex-grow: 1;
+    border-radius: 9999px;
+    height: .6rem
+}
+
+.thumb {
+    all: unset;
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+
+    border-radius: 100%;
+
+    background-color: var(--strongCyan);
+    background-image: url('../../assets/images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    box-shadow: 0px 15px 34px 5px var(--softCyan);
+    -webkit-box-shadow: 0px 15px 34px 5px var(--softCyan);
+    -moz-box-shadow: 0px 15px 34px 5px var(--softCyan);
+}
+
+.range {
+    position: absolute;
+    background-color: var(--softCyan);
+    height: .6rem;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 0;
+}
