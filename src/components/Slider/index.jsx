@@ -7,6 +7,7 @@ const Slider = (props) => {
         <Range.Root
             className={style.root}
             max={props.max || 4}
+            defaultValue={props.defaultValue || 2}
             onValueChange={(number) => props.onChange(number)}
         >
             <Range.Track className={style.track}>

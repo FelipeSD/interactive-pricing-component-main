@@ -8,6 +8,7 @@ import bgPattern from '../../assets/images/bg-pattern.svg';
 import iCheck from '../../assets/images/icon-check.svg';
 
 import './pricing.css';
+import Attribution from '../../components/Attribution';
 
 const BenefitItem = (props) => {
     return (
@@ -18,13 +19,13 @@ const BenefitItem = (props) => {
     )
 }
 
-const inputRangeView = { // value: views (in thousands)
-    0: '10k',
-    1: '50k',
-    2: '100k',
-    3: '500k',
-    4: '1M'
-}
+const inputRangeView = [ // value: views (in thousands)
+    '10k',
+    '50k',
+    '100k',
+    '500k',
+    '1M'
+]
 
 const pricePerView = { // views: dollars
     '10k': 8.00,
@@ -92,7 +93,12 @@ const Pricing = () => {
                         </div>
 
                         <div className="col-12 range-container">
-                            <Slider min="0" max="4" value={range} onChange={changeRange}/>
+                            <Slider 
+                                min="0" 
+                                max="4" 
+                                value={range}
+                                defaultValue={[range]} 
+                                onChange={changeRange} />
                         </div>
 
                         <div className="col-12 col-sm cost">
@@ -107,12 +113,16 @@ const Pricing = () => {
                         </label>
 
                         <div className="px-sm-1 px-2">
-                            <InputSwitch id="switch" value={billingType} onChange={changeBilling}/>
+                            <InputSwitch 
+                                id="switch" 
+                                value={billingType} 
+                                onChange={changeBilling} />
                         </div>
 
                         <label htmlFor="switch">
                             Yearly Billing
                         </label>
+
                         <div className="badge badge-sm badge-red">
                             -25% {' '}
                             <span className="discount-message ml-1">discount</span>
@@ -135,6 +145,8 @@ const Pricing = () => {
                     </div>
                 </div>
             </div>
+            
+            <Attribution name="Felipe" />
         </div>
     );
 }
