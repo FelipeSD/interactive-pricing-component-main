@@ -1,4 +1,3 @@
-import './App.css';
 import Pricing from './pages/Pricing';
 
 function App() {

@@ -1,3 +1,4 @@
+import React from 'react';
 import * as Range from '@radix-ui/react-slider';
 import style from './slider.module.css';
 
@@ -5,7 +6,7 @@ const Slider = (props) => {
     return (
         <Range.Root
             className={style.root}
-            max={props.max}
+            max={props.max || 4}
             onValueChange={(number) => props.onChange(number)}
         >
             <Range.Track className={style.track}>

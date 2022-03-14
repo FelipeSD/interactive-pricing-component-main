@@ -6,7 +6,7 @@ this webpage, and why did I choose React library to use in this project.
 ### Why React lib?
 React is a good library to build web applications. It allows you to divide the structure
 of your page into small generic components, so you can use them accordingly and maybe repeat them
-as it need with no repeated code. When you make components you can separate the styling files too, and
+as it needs with no repeated code. When you make components you can separate the styling files too, and
 this is awesome to organize the frontend code.
 
 ### Difficulties I've found
